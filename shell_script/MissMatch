@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+#A bash script that prints Miss or match:
+	#If divisble by 4 then Miss
+	#If divisble by 5 then Match
+	#if divisble by 4 and 5 the MissMatch
+
+for ((index=1; index<=100; index++))
+do
+	if ((index % 4 == 0)) && ((index % 5 == 0))
+	then
+		echo "MissMatch"
+	elif ((index % 4 == 0))
+	then
+		echo "Miss"
+	elif ((index % 5 == 0))
+	then
+		echo "Match"
+	else
+		echo $index
+	fi
+done
