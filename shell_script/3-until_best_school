@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+#A script that prints Name using until
+
+index=0
+
+until [ $index -ge 30 ]
+do
+	echo "DevOps Engineer"
+	index=$((index+1))
+	sleep 0.9
+done

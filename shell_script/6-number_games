@@ -1,0 +1,39 @@
+#!/usr/bin/bash
+# A bash script that prints ladies names ata different positions.
+
+index=1
+
+while [ $index -le 30 ]
+do
+	case $index in
+		6)
+			echo $index
+			echo 'Kimberly'
+			;;
+		10)
+			echo $index
+			echo 'Tasha'
+			;;
+		15)
+			echo $index
+			echo 'Racheal'
+			;;
+		20)
+			echo $index
+			echo 'Cindie'
+			;;
+		24)
+			echo $index
+			echo 'Pauline'
+			;;
+		29)
+			echo $index
+			echo 'Daisy'
+			;;
+		*)
+			echo $index
+			;;
+		esac
+	index=$((index+1))
+	sleep 0.9
+done

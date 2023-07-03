@@ -1,0 +1,44 @@
+#!/usr/bin/bash
+#A bash script that prints Names of girls and boys at different positions (5, 9, 13, 17, 20, 24, 27)
+
+index=1
+
+while [ $index -le 30 ]
+do
+	case $index in
+		5)
+			echo $index
+			echo 'Keith'
+			;;
+		9)
+			echo $index
+			echo 'Julie'
+			;;
+		13)
+			echo $index
+			echo 'Angie'
+			;;
+		17)
+			echo $index
+			echo 'Lavender'
+			;;
+		20)
+			echo $index
+			echo 'Candice'
+			;;
+		24)
+			echo $index
+			echo 'Nicole'
+			;;
+		27)
+			echo $index
+			echo 'Grace'
+			;;
+		*)	
+			echo $index
+			;;
+	esac
+	
+	index=$((index+1))
+	sleep 0.9
+done

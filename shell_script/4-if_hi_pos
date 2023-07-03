@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+#A bash script that prints at scertain position
+
+index=0
+
+while [ $index -lt 10 ]
+do
+	if [ $index -eq 8 ]
+	then
+		echo "I specialize in Shell scripting"
+	else
+		echo "I am a Devops Engineer"
+	fi
+	index=$((index+1))
+	sleep 0.9
+
+done

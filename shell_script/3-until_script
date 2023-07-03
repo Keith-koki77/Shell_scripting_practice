@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+#A script that prints using until
+
+index=15
+
+until [ $index -le 10 ]
+do
+	echo "Senior DevOps Engineer"
+	index=$((index+1))
+	sleep 0.9
+done

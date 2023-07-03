@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+#A bash script that reads a file line by line
+
+read -p 'Enter file name: ' filename
+
+#while loop is introduce to iteriate
+#-n1 is not used to enable the read line by line.
+while read line
+do 
+	echo $line
+done < $filename

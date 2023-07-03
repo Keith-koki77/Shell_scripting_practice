@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+#A bash script that shows all internal and external links from a URL
+
+#Give a URL
+read urL
+
+#wget will now download  this webpage in the file named webpage.txt
+#-O option is used to concat the content of the url to the file mentioned.
+wget -O webpage.txt "urL"
+
+#Now we will apply stream editor to filter the url from the file.
+sed -n 's/.*href="\([^"]*\).*/\1/p' webpage.txt

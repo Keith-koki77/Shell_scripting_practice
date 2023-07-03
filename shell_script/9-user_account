@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+#A script for various oprions of a user accounts:
+echo -e "\n
+	For listing all user accounts name \n
+	For counting the number of logged in user accounts \n
+	For listing the names of currently logged in users \n
+	For checking the groups to which the current user belonmgs to. \n"
+
+#Now take user input
+read userinput
+
+#use switch cases for varoius input operations.
+case $userinput in
+	1)
+	#syntax lslogins <option[=output field]>
+	lslogins -o USER
+	;;
+	2)
+	#syntax who <option> <user optional>
+	#grep used to filter
+	who --count | grep users
+	;;
+	3)
+	#-q option is to count the number of users and print the logged in user
+	s
+	#instead of -q, --count can also be used.
+	#-v is used to exclude any pattern
+	who -q | grep -v users
+	;;
+	4)
+	#syntax groups <option> [USERNAME]
+	groups
+	;;
+	*)
+	echo -e 'Please Enter Corret Input \n'
+	;;
+
+esac

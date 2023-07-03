@@ -1,0 +1,32 @@
+#!/usr/bin/bash
+#A bash script that print country names after 4th, 9th, 14th & 17th while loop iteriation.
+
+index=1
+
+while [ $index -le 20 ]
+do
+	case $index in
+		4)
+			echo $index
+			echo 'Ghana'
+			;;
+		9)
+			echo $index
+			echo 'Nigeria'
+			;;
+		14)
+			echo $index
+			echo 'Kenya'
+			;;
+		17)
+			echo $index
+			echo 'Zambia'
+			;;
+		*)
+			echo $index
+			;;
+	esac
+
+	index=$((index+1))
+	sleep 0.9
+done

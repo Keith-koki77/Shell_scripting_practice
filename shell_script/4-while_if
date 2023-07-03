@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+#A script using while and if loop to print
+
+index=2
+
+while [ $index -le 12 ]
+do
+	if [ $index -eq 7 ]
+	then
+		echo "Senior DevOps"
+		echo "Keith Koki"
+	else
+		echo "Senoir DevOps"
+	fi
+	index=$((index+1))
+	sleep 0.9
+done

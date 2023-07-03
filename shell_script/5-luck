@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+#A bqash script that prints luck at different positions (4, 9 13)
+
+index=0
+
+while [ $index -lt 15 ]
+do
+	if [ $index -eq 3 ]
+	then
+		echo 'I am lucky to have this opportunity'
+	elif [ $index -eq 8 ]
+	then
+		echo 'But luck comes as a result of hardwork'
+	elif [ $index -eq 12 ]
+	then
+		echo 'We all get lucky at some points in life'
+	else
+		echo 'I want to be a DevOps Engineer'
+	fi
+	index=$((index+1))
+	sleep 0.9
+done 

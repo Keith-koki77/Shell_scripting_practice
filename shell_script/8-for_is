@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+#A bash script that:
+	#Displays the content of the current directory
+	#Displays in a list format
+	#Displays where only the part of the name after the first dash is displayed.
+#Must use for loop...(while loop and until are forbidden)
+
+list=$(ls)
+
+for file in $list
+do
+	find "$file" | cut -d- -f2
+done

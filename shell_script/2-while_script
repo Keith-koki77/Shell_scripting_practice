@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+index=60
+
+while [ $index -ge 56 ]
+do
+	echo "Keith koki"
+	index=$((index+1))
+	sleep 0.9
+done
