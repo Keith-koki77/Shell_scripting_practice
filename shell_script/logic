@@ -1,0 +1,44 @@
+#!/usr/bin/bash
+#A bash script that propmts user input for age to confirm if:
+	#Young
+	#Youth
+	#Old
+
+#User input captured and stored in variable age
+read -p "What is your age: " AGE
+
+#Condtion to enusre that age is not empty
+if [[ -z $AGE ]]
+then
+	echo "Error: No value provided for age"
+	exit 1
+fi
+
+#Condition to ensure that age is an integer
+if ! [[ $AGE =~ ^[0-9]+$ ]]
+then 
+	echo "Erroe: Expected to be a number. Age can only be a number"
+	exit 1
+fi
+
+#The AND operator in place
+if [[ $AGE -ge 0 && $AGE -le 17 ]]
+then
+	echo "Yikes! You are Young"
+elif [[ $AGE -ge 18 && $AGE -le 35 ]]
+then
+	echo "Wow! You are a Youth"
+else
+	echo "Great! You are Old"
+fi
+
+exit 0
+
+#The OR Operator
+if [[ $AGE == 17 || $AGE == 35 ]]
+then
+	echo "You are about to transition to the next age bracket"
+fi
+
+exit 0
+
